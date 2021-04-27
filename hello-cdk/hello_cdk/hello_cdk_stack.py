@@ -7,7 +7,9 @@ from aws_cdk import (
     aws_s3 as s3,
     aws_s3_notifications as s3n,
     aws_sqs as sqs,
-    aws_apigateway as apigw
+    aws_apigateway as apigw,
+    aws_amplify as amp,
+    aws_codebuild as cb
 )
 # from aws_cdk import aws_lambda_event_sources 
 
@@ -170,6 +172,16 @@ class HelloCdkStack(cdk.Stack):
                 request_templates={"application/json": '{ "statusCode": "200" }'})
 
         api_gateway.root.add_method("GET", get_widgets_integration)   # GET /
+        
+        token = cdk.SecretValue.plain_text("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")
+
+        amplify_app = amp.App(self, "MyApp",
+            source_code_provider=amp.GitHubSourceCodeProvider(
+                owner="devandhrew",
+                repository="swen-514-614-spring2021/term-project--team-9",
+                oauth_token=token
+            )
+        )
 
         cdk.CfnOutput(self, 'rdsendpoint', value = myrds.db_instance_endpoint_address)
 
