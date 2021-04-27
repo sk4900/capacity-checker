@@ -2,7 +2,7 @@ import boto3 as bt3
 import psycopg2 as psql
 import json
  
-with open('cdk-outputs.json') as f:
+with open('.\Archive\src\cdk-outputs.json') as f:
     data = json.load(f)
 
 ENDPOINT=data['HelloCdkStack']['rdsendpoint']

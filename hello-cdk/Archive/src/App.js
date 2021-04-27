@@ -1,7 +1,8 @@
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 import './css/style.css';
-import endpoint from './hello-cdk/cdk-outputs.json'
+import endpoint from "./cdk-outputs.json"
+
 
 export default class App extends React.Component {
 
@@ -15,8 +16,8 @@ export default class App extends React.Component {
   };
 
   async componentDidMount() {
-    const url = endpoint.Endpoint8024A810;
-    print(url);
+    const url = endpoint.HelloCdkStack.Endpoint8024A810;
+    console.log(url);
     // const response = await fetch(url);
 
 

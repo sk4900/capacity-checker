@@ -1,6 +1,0 @@
-{
-  "HelloCdkStack": {
-    "Endpoint8024A810": "https://xknzu3h5wk.execute-api.us-east-1.amazonaws.com/prod/",
-    "rdsendpoint": "hrtos4dlojljmi.cnjam5yyizmx.us-east-1.rds.amazonaws.com"
-  }
-}
