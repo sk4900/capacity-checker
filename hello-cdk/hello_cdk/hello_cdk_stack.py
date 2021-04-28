@@ -51,6 +51,15 @@ class HelloCdkStack(cdk.Stack):
                     effect= iam.Effect.ALLOW
                     )
 
+        # token = cdk.SecretValue.plain_text("")
+
+        # amplify_app = amp.App(self, "MyApp",
+        #     source_code_provider=amp.GitHubSourceCodeProvider(
+        #         owner="",
+        #         repository="term-project--team-9",
+        #         oauth_token=token
+        #     )
+        # )
 
                     
         # matt beef bucket
@@ -173,15 +182,7 @@ class HelloCdkStack(cdk.Stack):
 
         api_gateway.root.add_method("GET", get_widgets_integration)   # GET /
         
-        # token = cdk.SecretValue.plain_text("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")
 
-        # amplify_app = amp.App(self, "MyApp",
-        #     source_code_provider=amp.GitHubSourceCodeProvider(
-        #         owner="devandhrew",
-        #         repository="swen-514-614-spring2021/term-project--team-9",
-        #         oauth_token=token
-        #     )
-        # )
 
         cdk.CfnOutput(self, 'rdsendpoint', value = myrds.db_instance_endpoint_address)
 
