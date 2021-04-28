@@ -1,0 +1,51 @@
+body {
+  background-image: url(https://www.emeraldgrouppublishing.com/sites/default/files/image/covid-cells.jpg);
+  background-size: cover;
+}
+
+#main-head {
+  font-size: 4em;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+
+h2.sub-head {
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  color: orange;
+  font-size: 2em;
+}
+
+div.main-page {
+  width: 50%;
+  margin: auto;
+  background-color: black;
+  border-radius: 10%;
+  text-align: center;
+  opacity: 95%;
+  
+}
+
+/* div.occupancy-pie-chart{
+  width: 12%;
+  height: 12%;
+} */
+
+h2.color-code-head{ 
+  font-family: sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  color: yellow;
+
+}
+
+#color-code-box {
+  height: 10em;
+  width: 10em;
+  margin: auto;
+  border-radius: 50%;
+  opacity: 100%;
+}
