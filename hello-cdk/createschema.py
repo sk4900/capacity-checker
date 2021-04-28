@@ -1,11 +1,14 @@
 import boto3 as bt3
 import psycopg2 as psql
 import json
+import sys
+
+arg1 = str(sys.argv[1])
  
 with open(r'.\frontend\src\cdk-outputs.json') as f:
     data = json.load(f)
 
-ENDPOINT=data['HelloCdkStack']['rdsendpoint']
+ENDPOINT="hrgczq2xytkyyg.cnjam5yyizmx.us-east-1.rds.amazonaws.com"#data['HelloCdkStack']['rdsendpoint']
 PORT="5432"
 USR="team9"
 PASS="swen614Team9"
@@ -86,7 +89,7 @@ try:
     rooms_to_insert = ('2000','GOL',9,False)
 
     admins_insert_query = """ INSERT INTO admins(first_name, last_name, department, phone, email ) VALUES (%s,%s,%s,%s,%s)"""
-    admins_to_insert = ('Devan', 'Lad', 'CS', '+14089214831', 'dpl2047@g.rit.edu')
+    admins_to_insert = ('Devan', 'Lad', 'CS', arg1, 'dpl2047@g.rit.edu')
 
     room_admin_insert_query = """ INSERT INTO room_admins(room_id,admin_id) VALUES (%s,%s)"""
     room_admin_to_insert = (1,1)

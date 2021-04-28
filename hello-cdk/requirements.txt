@@ -1,1 +1,18 @@
+aws_cdk.core==1.98.0
+aws-cdk.aws_s3
+aws-cdk.aws_s3_notifications
+aws-cdk.aws_lambda
+aws-cdk.aws_amplify
+aws-cdk.aws_ec2
+aws-cdk.aws_sqs
+aws-cdk.aws_apigateway
+aws-cdk.aws_iam
+aws-cdk.aws_rds
+aws_cdk.aws_lambda_event_sources
+boto3
+pafy
+opencv-python
+youtube-dl
+psycopg2; sys_platform == 'windows'
+psycopg2-binary; sys_platform == 'darwin'
 -e .

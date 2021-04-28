@@ -51,15 +51,15 @@ class HelloCdkStack(cdk.Stack):
                     effect= iam.Effect.ALLOW
                     )
 
-        # token = cdk.SecretValue.plain_text("")
+        token = cdk.SecretValue.plain_text("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")
 
-        # amplify_app = amp.App(self, "MyApp",
-        #     source_code_provider=amp.GitHubSourceCodeProvider(
-        #         owner="",
-        #         repository="term-project--team-9",
-        #         oauth_token=token
-        #     )
-        # )
+        amplify_app = amp.App(self, "MyApp",
+            source_code_provider=amp.GitHubSourceCodeProvider(
+                owner="swen-514-614-spring2021",
+                repository="term-project--team-9",
+                oauth_token=token
+            )
+        )
 
                     
         # matt beef bucket
