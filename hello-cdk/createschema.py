@@ -8,7 +8,7 @@ arg1 = str(sys.argv[1])
 with open(r'.\frontend\src\cdk-outputs.json') as f:
     data = json.load(f)
 
-ENDPOINT="hrgczq2xytkyyg.cnjam5yyizmx.us-east-1.rds.amazonaws.com"#data['HelloCdkStack']['rdsendpoint']
+ENDPOINT=data['HelloCdkStack']['rdsendpoint']
 PORT="5432"
 USR="team9"
 PASS="swen614Team9"
