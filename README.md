@@ -6,6 +6,8 @@ Initial Requirements:
 2. Have AWS CLI and .aws/Credentials Set Up
 3. Python installed https://www.python.org/downloads/
 
+NOTE: Be sure to run all python scripts with Python 3.
+
 Project Set Up:
 
 Install aws cdk
