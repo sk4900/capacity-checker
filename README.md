@@ -34,7 +34,7 @@ $ source .venv/bin/activate
 To manually create a virtualenv on Windows:
 
 ```
-$ python -m venv .\hello-cdk
+$ python -m venv .\venv
 ```
 If you are a Windows platform, you would activate the virtualenv like this:
 
