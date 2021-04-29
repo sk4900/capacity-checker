@@ -18,21 +18,16 @@ def determineStatus(numocc, maxcap,phonenumber, cursor, alert, room, building):
     if(result <= 33):
         if(alert == True):
             update(room, building, cursor, alert)
-            sns.publish(PhoneNumber = phonenumber, Message='example text message', MessageAttributes={
-                'AWS.SNS.SMS.SMSType' : {
-                    'DataType' : 'String',
-                    'StringValue': 'Transactional'
-                }
-            } )
+            sns.publish(PhoneNumber = '+14089214831', Message='Status has dropped from Red', MessageAttributes={'AWS.SNS.SMS.SMSType' :{'DataType': 'String','StringValue': 'Transactional'}} )
         return 'green'
     elif (33 < result <= 67):
         if(alert == True):
             update(room, building, cursor, alert)
-            sns.publish(PhoneNumber = phonenumber, Message='example text message', MessageAttributes={'AWS.SNS.SMS.SMSType' : {'DataType' : 'String','StringValue': 'Transactional'}} )
+            sns.publish(PhoneNumber = phonenumber, Message='Status has dropped from Red', MessageAttributes={'AWS.SNS.SMS.SMSType' : {'DataType' : 'String','StringValue': 'Transactional'}} )
         return 'yellow'
     elif ( 67 < result):
         update(room, building, cursor, alert)
-        sns.publish(PhoneNumber = '+14089214831', Message='example text message', MessageAttributes={'AWS.SNS.SMS.SMSType' :{'DataType': 'String','StringValue': 'Transactional'}} )
+        sns.publish(PhoneNumber = '+14089214831', Message='Guidelines have been violated RED STATUS', MessageAttributes={'AWS.SNS.SMS.SMSType' :{'DataType': 'String','StringValue': 'Transactional'}} )
         return 'red'
 
 
