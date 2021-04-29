@@ -60,6 +60,7 @@ class HelloCdkStack(cdk.Stack):
                 oauth_token=token
             )
         )
+        amplify_app.add_branch("main")
 
                     
         # matt beef bucket
@@ -182,8 +183,8 @@ class HelloCdkStack(cdk.Stack):
 
         api_gateway.root.add_method("GET", get_widgets_integration)   # GET /
         
-
-
+ 
+        cdk.CfnOutput(self, 'frontend', value = "https://main."+amplify_app.default_domain)
         cdk.CfnOutput(self, 'rdsendpoint', value = myrds.db_instance_endpoint_address)
 
 
